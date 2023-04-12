@@ -1,11 +1,17 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
+  <ToolBar></ToolBar>
+  <router-view></router-view>
 </template>
 
 <script>
+import ToolBar from '@/components/ToolBar.vue'
+import {defineComponent} from "vue";
 
-export default {
-}
+export default defineComponent({
+  components: {ToolBar}
+})
+
+
 </script>
 
 <style>
