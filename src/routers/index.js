@@ -2,8 +2,11 @@ import { createRouter, createWebHistory } from 'vue-router'
 import NewsView from '@/views/NewsView.vue'
 import JobsView from "@/views/JobsView.vue";
 import AskView from "@/views/AskView.vue";
+import UserVue from "@/views/UserVue.vue";
+import ItemView from "@/views/ItemView.vue";
 
 const routes = [
+    // mode: history,
     {
         path: '/',
         redirect: '/news'
@@ -20,6 +23,14 @@ const routes = [
         path: '/ask',
         component: AskView
     },
+    {
+        path: '/user',
+        component: UserVue
+    },
+    {
+        path: '/item',
+        component: ItemView
+    }
 ]
 
 const router = createRouter({

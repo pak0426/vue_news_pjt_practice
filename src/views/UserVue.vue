@@ -1,15 +1,10 @@
 <template>
-  <div>
-    News!
-  </div>
+
 </template>
 
 <script>
 export default {
-  name: "NewsView.vue"
-}
-
-export class NewsView {
+  name: "UserVue"
 }
 </script>
 
