@@ -6,7 +6,6 @@ import UserVue from "@/views/UserVue.vue";
 import ItemView from "@/views/ItemView.vue";
 
 const routes = [
-    // mode: history,
     {
         path: '/',
         redirect: '/news'

@@ -1,12 +1,28 @@
 <template>
-  <div>
-    Ask!
+  <div v-for="ask in asks" v-bind:key="ask">
+    {{ ask }}
   </div>
 </template>
 
 <script>
+import {fetchAsksList} from '../api/index'
+
 export default {
-  name: "NewsView.vue"
+  data() {
+    return {
+      asks: []
+    }
+  },
+  created() {
+    fetchAsksList()
+        .then(response => {
+          console.log('response', response);
+          this.asks = response
+        })
+        .catch(error => {
+          console.log('error', error);
+        })
+  }
 }
 </script>
 
