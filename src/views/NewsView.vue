@@ -1,15 +1,30 @@
 <template>
   <div>
-    News!
+    <div v-for="user in users" v-bind:key="user">
+      {{ user.title }}
+    </div>
   </div>
 </template>
 
 <script>
-export default {
-  name: "NewsView.vue"
-}
+import axios from 'axios';
 
-export class NewsView {
+export default {
+  data() {
+    return {
+      users: []
+    }
+  },
+  created() {
+    axios.get('https://api.hnpwa.com/v0/news/1.json')
+        .then(response => {
+          console.log('response', response);
+          this.users = response.data;
+        })
+        .catch(error => {
+          console.log('error', error);
+        });
+  }
 }
 </script>
 
