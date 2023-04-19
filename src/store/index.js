@@ -6,13 +6,15 @@ export const store =  new Vuex.Store({
     state: {
         news: [],
         jobs: [],
-        asks: []
+        asks: [],
+        user: {}
     },
     mutations: Mutations,
     getters: {
       fetchedJobs(state) {
           return state.jobs;
-      }
+      },
+
     },
     actions: Actions
 })
