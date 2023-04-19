@@ -23,7 +23,7 @@ const routes = [
         component: AskView
     },
     {
-        path: '/user',
+        path: '/user/:id',
         component: UserVue
     },
     {
