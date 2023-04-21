@@ -27,7 +27,7 @@ const routes = [
         component: UserVue
     },
     {
-        path: '/item',
+        path: '/item/:id',
         component: ItemView
     }
 ]
