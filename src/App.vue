@@ -1,6 +1,10 @@
 <template>
-  <ToolBar></ToolBar>
-  <router-view></router-view>
+  <div id="app">
+    <ToolBar></ToolBar>
+    <transition name="fade">
+      <router-view></router-view>
+    </transition>
+  </div>
 </template>
 
 <script>
@@ -18,5 +22,12 @@ export default defineComponent({
 #app {
   padding: 0;
   margin: 0;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
 }
 </style>
