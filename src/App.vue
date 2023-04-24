@@ -19,15 +19,25 @@ export default defineComponent({
 </script>
 
 <style>
-#app {
+body {
   padding: 0;
   margin: 0;
 }
-
 .fade-enter-active, .fade-leave-active {
   transition: opacity 0.5s;
 }
 .fade-enter, .fade-leave-to {
   opacity: 0;
+}
+a {
+  color: #34495e;
+  text-decoration: none;
+}
+a:hover {
+  color:#42b883;
+  text-decoration: underline;
+}
+a.router-link-exact-active {
+  text-decoration: underline;
 }
 </style>
