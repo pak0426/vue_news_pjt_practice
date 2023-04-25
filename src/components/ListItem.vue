@@ -1,9 +1,9 @@
 <template>
   <div>
     <ul class="news-list">
-      <li v-for="item in news" v-bind:key="item" class="post">
+      <li v-for="item in listItem" v-bind:key="item" class="post">
         <div class="points">
-          {{ item.points }}
+          {{ item.points || 0 }}
         </div>
         <div>
           <p class="news-title">
@@ -20,16 +20,30 @@
 </template>
 
 <script>
-import {mapState} from "vuex";
-
 export default {
-  computed: {
-    ...mapState({
-      news: state => state.news
-    })
-  },
   created() {
-    this.$store.dispatch('FETCH_NEWS');
+    const name = this.$route.name;
+    let fetchName;
+    if(name === 'news') fetchName = 'FETCH_NEWS';
+    else if(name === 'asks') fetchName = 'FETCH_ASKS';
+    else if(name === 'jobs') fetchName = 'FETCH_JOBS';
+
+    this.$store.dispatch(fetchName);
+  },
+  computed: {
+    listItem() {
+      const name = this.$route.name;
+      let listItem;
+      if(name === 'news') listItem = this.$store.state.news;
+      else if(name === 'asks') listItem = this.$store.state.asks;
+      else if(name === 'jobs') listItem = this.$store.state.jobs;
+      return listItem;
+    }
+  },
+  data() {
+    return {
+
+    }
   }
 }
 </script>
