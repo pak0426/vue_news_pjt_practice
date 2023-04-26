@@ -6,14 +6,14 @@
           <i class="fa-solid fa-user"></i>
         </div>
         <div class="user-description">
-          <div v-if="getInfoItem.user">
-            {{ getInfoItem.id }}
-          </div>
           <router-link
-              v-else
+              v-if="getInfoItem.user"
               :to="`/user/${getInfoItem.user}`">
             {{ getInfoItem.id }}
           </router-link>
+          <div v-else>
+            {{ getInfoItem.id }}
+          </div>
           <div class="time">
             {{ getInfoItem.time_ago }}
           </div>
