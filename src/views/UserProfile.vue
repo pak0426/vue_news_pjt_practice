@@ -1,8 +1,15 @@
 <template>
-  <div>
-    <p>name: {{ info.id }}</p>
-    <p>karma: {{ info.karma }}</p>
-    <p>created: {{ info.created }}</p>
+    <div class="user-container">
+    <div>
+      <i class="fa-solid fa-user"></i>
+    </div>
+    <div class="user-description">
+      <slot name="username"></slot>
+      <div class="time">
+        <slot name="time"></slot>
+      </div>
+      <slot name="karma"></slot>
+    </div>
   </div>
 </template>
 
@@ -15,5 +22,18 @@ export default {
 </script>
 
 <style scoped>
-
+.user-container {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+.fa-user {
+  font-size: 2.5rem;
+}
+.user-description {
+  padding-left: 10px;
+}
+.time {
+  font-size: 0.7rem;
+}
 </style>

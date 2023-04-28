@@ -1,5 +1,15 @@
 <template>
-  <UserProfile :info="userInfo"></UserProfile>
+  <UserProfile :info="userInfo">
+    <template v-slot:username>
+      <div>{{ userInfo.id }}</div>
+    </template>
+    <template v-slot:time>
+      {{ userInfo.created }}
+    </template>
+    <template v-slot:karma>
+      {{ userInfo.karma }}
+    </template>
+  </UserProfile>
 </template>
 
 <script>
