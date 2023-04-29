@@ -4,10 +4,14 @@
       <div>{{ userInfo.id }}</div>
     </template>
     <template v-slot:time>
-      {{ userInfo.created }}
+      <span>
+        {{ 'Joined ' + userInfo.created }},
+      </span>
     </template>
     <template v-slot:karma>
-      {{ userInfo.karma }}
+      <span>
+        {{ userInfo.karma }}
+      </span>
     </template>
   </UserProfile>
 </template>
@@ -30,7 +34,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-
-</style>

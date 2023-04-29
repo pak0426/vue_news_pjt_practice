@@ -7,8 +7,8 @@
       <slot name="username"></slot>
       <div class="time">
         <slot name="time"></slot>
+        <slot name="karma"></slot>
       </div>
-      <slot name="karma"></slot>
     </div>
   </div>
 </template>
@@ -32,8 +32,9 @@ export default {
 }
 .user-description {
   padding-left: 10px;
+  font-size: 20px;
 }
 .time {
-  font-size: 0.7rem;
+  font-size: 1.0rem;
 }
 </style>
