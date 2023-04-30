@@ -48,5 +48,8 @@ export default {
             .catch(error => {
                 console.log('error', error);
             })
+    },
+    SET_LOADINGSTATUS({ commit }, loadingStatus) {
+        commit('SET_LOADINGSTATUS', loadingStatus);
     }
 }

@@ -8,7 +8,8 @@ export const store =  new Vuex.Store({
         asks: [],
         jobs: [],
         user: {},
-        item: {}
+        item: {},
+        loadingStatus: false
     },
     mutations: Mutations,
     getters: {
@@ -17,6 +18,9 @@ export const store =  new Vuex.Store({
         },
         getInfoItem(state) {
             return state.item;
+        },
+        getLoadingStatus(state) {
+            return state.loadingStatus;
         }
     },
     actions: Actions

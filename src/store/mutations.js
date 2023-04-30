@@ -13,5 +13,8 @@ export default {
     },
     SET_ITEMINFO(state, item) {
         state.item = item;
+    },
+    SET_LOADINGSTATUS(state, loadingStatus) {
+        state.loadingStatus = loadingStatus;
     }
 }

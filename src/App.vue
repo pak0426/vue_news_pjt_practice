@@ -4,15 +4,20 @@
     <transition name="fade">
       <router-view></router-view>
     </transition>
+    <Spinner :loading="this.$store.state.loadingStatus"></Spinner>
   </div>
 </template>
 
 <script>
-import ToolBar from '@/components/ToolBar.vue'
 import {defineComponent} from "vue";
+import ToolBar from '@/components/ToolBar.vue'
+import Spinner from "@/components/Spinner.vue";
 
 export default defineComponent({
-  components: {ToolBar}
+  components: {
+    ToolBar,
+    Spinner
+  },
 })
 
 
