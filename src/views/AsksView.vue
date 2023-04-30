@@ -7,12 +7,12 @@ import ListItem from '../components/ListItem.vue'
 
 export default {
   components: {
-    ListItem,
+    ListItem
   },
   created() {
     this.$store.dispatch('SET_LOADINGSTATUS', true)
         .then(() => {
-          this.$store.dispatch('FETCH_NEWS')
+          this.$store.dispatch('FETCH_ASKS')
               .then(() => {
                 setTimeout(() =>
                     this.$store.dispatch('SET_LOADINGSTATUS', false), 300

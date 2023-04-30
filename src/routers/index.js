@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import NewsView from '@/views/NewsView.vue'
 import JobsView from "@/views/JobsView.vue";
-import AskView from "@/views/AskView.vue";
+import AskView from "@/views/AsksView.vue";
 import UserVue from "@/views/UserView.vue";
 import ItemView from "@/views/ItemView.vue";
 
