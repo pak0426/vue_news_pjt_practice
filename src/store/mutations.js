@@ -16,5 +16,8 @@ export default {
     },
     SET_LOADINGSTATUS(state, loadingStatus) {
         state.loadingStatus = loadingStatus;
+    },
+    SET_LIST(state, list) {
+        state.list = list;
     }
 }

@@ -9,7 +9,8 @@ export const store =  new Vuex.Store({
         jobs: [],
         user: {},
         item: {},
-        loadingStatus: false
+        loadingStatus: false,
+        list: []
     },
     mutations: Mutations,
     getters: {

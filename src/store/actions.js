@@ -1,4 +1,5 @@
-import {fetchAsksList, fetchJobsList, fetchNewsList, fetchUserInfo, fetchItemInfo} from "@/api";
+import {fetchAsksList, fetchJobsList, fetchNewsList, fetchUserInfo, fetchItemInfo, fetchList} from "@/api";
+import {charAt} from "core-js/internals/string-multibyte";
 
 export default {
     FETCH_NEWS(context) {
@@ -51,5 +52,10 @@ export default {
     },
     SET_LOADINGSTATUS({ commit }, loadingStatus) {
         commit('SET_LOADINGSTATUS', loadingStatus);
+    },
+    FETCH_LIST({ commit }, pageName) {
+        fetchList(pageName)
+            .then(({ data }) => commit('SET_LIST', data))
+            .catch(error => console.log('error', error));
     }
 }
