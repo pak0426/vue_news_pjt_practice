@@ -19,8 +19,6 @@ export default defineComponent({
     Spinner
   },
 })
-
-
 </script>
 
 <style>
