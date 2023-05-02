@@ -35,22 +35,13 @@
 
 <script>
 export default {
-  created() {
-    const name = this.$route.name;
-    let fetchName;
-    if(name === 'news') fetchName = 'FETCH_NEWS';
-    else if(name === 'asks') fetchName = 'FETCH_ASKS';
-    else if(name === 'jobs') fetchName = 'FETCH_JOBS';
-
-    this.$store.dispatch(fetchName);
-  },
   computed: {
     listItem() {
       const name = this.$route.name;
       let listItem;
-      if(name === 'news') listItem = this.$store.state.news;
-      else if(name === 'asks') listItem = this.$store.state.asks;
-      else if(name === 'jobs') listItem = this.$store.state.jobs;
+      if(name === 'news') listItem = this.$store.state.list;
+      else if(name === 'ask') listItem = this.$store.state.list;
+      else if(name === 'jobs') listItem = this.$store.state.list;
       return listItem;
     }
   },

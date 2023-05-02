@@ -4,9 +4,6 @@ import Actions from './actions'
 
 export const store =  new Vuex.Store({
     state: {
-        news: [],
-        asks: [],
-        jobs: [],
         user: {},
         item: {},
         loadingStatus: false,
