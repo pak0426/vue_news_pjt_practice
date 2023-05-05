@@ -3,6 +3,7 @@ export default {
     created() {
         this.$store.dispatch('SET_LOADINGSTATUS', true)
             .then(() => {
+                console.log('fetch');
                 this.$store.dispatch('FETCH_LIST', this.$route.name)
                     .then(() => {
                         setTimeout(() =>

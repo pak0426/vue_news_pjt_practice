@@ -2,7 +2,7 @@ import {fetchUserInfo, fetchItemInfo, fetchList} from "@/api";
 
 export default {
     FETCH_USERINFO({ commit }, userName) {
-        fetchUserInfo(userName)
+        return fetchUserInfo(userName)
             .then(response => {
                 console.log('response', response);
                 commit('SET_USERINFO', response.data);
@@ -10,7 +10,7 @@ export default {
             .catch(error => console.log('error', error))
     },
     FETCH_ITEMINFO({ commit }, itemId) {
-        fetchItemInfo(itemId)
+        return fetchItemInfo(itemId)
             .then(response => {
                 console.log('response', response);
                 commit('SET_ITEMINFO', response.data);
@@ -20,10 +20,10 @@ export default {
             })
     },
     SET_LOADINGSTATUS({ commit }, loadingStatus) {
-        commit('SET_LOADINGSTATUS', loadingStatus);
+        return commit('SET_LOADINGSTATUS', loadingStatus);
     },
     FETCH_LIST({ commit }, pageName) {
-        fetchList(pageName)
+        return fetchList(pageName)
             .then(({ data }) => commit('SET_LIST', data))
             .catch(error => console.log('error', error));
     }
