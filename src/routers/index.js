@@ -26,9 +26,6 @@ const routes = [
                     console.log('fetch');
                     store.dispatch('FETCH_LIST', to.name)
                         .then(() => {
-                            setTimeout(() =>
-                                store.dispatch('SET_LOADINGSTATUS', false), 300
-                            )
                             next();
                         })
                 })
@@ -38,13 +35,39 @@ const routes = [
         path: '/asks',
         name: 'ask',
         // component: createListView('AskView')
-        component: AsksView
+        component: AsksView,
+        beforeEnter: (to, from, next) => {
+            console.log('to', to);
+            console.log('from', from);
+            console.log('enter', next);
+            store.dispatch('SET_LOADINGSTATUS', true)
+                .then(() => {
+                    console.log('fetch');
+                    store.dispatch('FETCH_LIST', to.name)
+                        .then(() => {
+                            next();
+                        })
+                })
+        }
     },
     {
         path: '/jobs',
         name: 'jobs',
         // component: createListView('JobsView')
-        component: JosView
+        component: JosView,
+        beforeEnter: (to, from, next) => {
+            console.log('to', to);
+            console.log('from', from);
+            console.log('enter', next);
+            store.dispatch('SET_LOADINGSTATUS', true)
+                .then(() => {
+                    console.log('fetch');
+                    store.dispatch('FETCH_LIST', to.name)
+                        .then(() => {
+                            next();
+                        })
+                })
+        }
     },
     {
         path: '/user/:id',
