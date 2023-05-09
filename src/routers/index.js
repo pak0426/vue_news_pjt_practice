@@ -6,6 +6,7 @@ import NewsView from "@/components/NewsView.vue";
 import AsksView from "@/components/AsksView.vue";
 import JosView from "@/components/JosView.vue";
 import store from "@/store/index";
+import ChartView from "@/components/ChartView.vue";
 
 const routes = [
     {
@@ -76,6 +77,10 @@ const routes = [
     {
         path: '/item/:id',
         component: ItemView
+    },
+    {
+        path: '/chart',
+        component: ChartView
     }
 ]
 
