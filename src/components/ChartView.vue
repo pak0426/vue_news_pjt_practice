@@ -1,6 +1,6 @@
 <template>
   <div>
-<!--    <BarChart></BarChart>-->
+    <BarChart></BarChart>
     <LineChart></LineChart>
   </div>
 </template>
