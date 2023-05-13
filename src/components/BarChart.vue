@@ -1,6 +1,6 @@
 <template>
   <div>
-    <canvas id="barChart"></canvas>
+    <canvas ref="barChart" id="barChart"></canvas>
   </div>
 </template>
 
@@ -10,7 +10,7 @@ Chart.register(...registerables);
 
 export default {
   mounted() {
-    const ctx = document.getElementById('barChart');
+    const ctx = this.$refs.barChart;
     new Chart(ctx, {
       type: 'bar',
       data: {
