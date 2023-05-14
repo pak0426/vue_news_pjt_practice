@@ -1,17 +1,14 @@
 <template>
-  <div>
+  <div style="width: 800px;height: 400px">
     <canvas ref="barChart" id="barChart"></canvas>
   </div>
 </template>
 
 <script>
-import { Chart, registerables } from "chart.js";
-Chart.register(...registerables);
-
 export default {
   mounted() {
     const ctx = this.$refs.barChart;
-    new Chart(ctx, {
+    new this.$_Chart(ctx, {
       type: 'bar',
       data: {
         labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],

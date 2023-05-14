@@ -1,13 +1,10 @@
 <template>
-  <div>
+  <div style="width: 800px;height: 400px">
     <canvas ref="lineChart" id="lineChart"></canvas>
   </div>
 </template>
 
 <script>
-import { Chart, registerables } from "chart.js";
-Chart.register(...registerables);
-
 export default {
   data() {
     return {
@@ -37,7 +34,7 @@ export default {
   },
   mounted() {
     const ctx = document.getElementById('lineChart');
-    new Chart(ctx, {
+    new this.$_Chart(ctx, {
       type: 'line',
       data: this.data,
       options: {
