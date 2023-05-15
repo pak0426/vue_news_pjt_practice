@@ -9,11 +9,6 @@ export default {
   data() {
     return {
       data: {
-        DATA_COUNT: 7,
-        NUMBER_CFG: {
-          count: this.DATA_COUNT,
-          min: -100, max: 100
-        },
         labels: ['January', 'February', 'April', 'May', 'Jun', 'July', 'August'],
         datasets: [
           {

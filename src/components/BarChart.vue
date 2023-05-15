@@ -8,25 +8,23 @@
 export default {
   data() {
     return {
-      DATA_COUNT: 7,
-      labels: ['January', 'February', 'April', 'May', 'Jun', 'July', 'August'],
       data: {
-        labels: this.labels,
+        labels: ['January', 'February', 'April', 'May', 'Jun', 'July', 'August'],
         datasets: [
           {
             label: 'Fully Rounded',
-            data: [65, 59, 80, 81, 56, 55, 40],
-            borderColor: 'rgba(255, 99, 132, 0.2)',
-            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            data: [-80, 25, 40, 78, 98, -97, -12],
+            borderColor: 'rgb(192,75,145)',
+            backgroundColor: 'rgb(192,75,145)',
             borderWidth: 3,
             borderRadius: 1,
             borderSkipped: false,
           },
           {
             label: 'Small Radius',
-            data: [12, 19, 3, 5, 2, 3],
-            borderColor: '#0054FF',
-            backgroundColor: '#0054FF',
+            data: [65, 59, 80, 81, 56, 55, 40],
+            borderColor: 'rgb(75,192,134)',
+            backgroundColor: 'rgb(75,192,134)',
             borderWidth: 3,
             borderRadius: 5,
             borderSkipped: false,
