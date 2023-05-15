@@ -37,14 +37,6 @@ export default {
     const ctx = this.$refs.barChart;
     new this.$_Chart(ctx, {
       type: 'bar',
-      // data: {
-      //   labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-      //   datasets: [{
-      //     label: '# of Votes',
-      //     data: [12, 19, 3, 5, 2, 3],
-      //     borderWidth: 1
-      //   }]
-      // },
       data: this.data,
       options: {
         responsive: true,
