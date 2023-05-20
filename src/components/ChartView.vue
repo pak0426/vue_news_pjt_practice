@@ -1,10 +1,13 @@
 <template>
-  <select v-model="pick">
-    <option value="barChart">Bar Chart</option>
-    <option value="lineChart">Line Chart</option>
-    <option value="polarChart">Polar Area Chart</option>
-    <option value="radarChart">Radar Chart</option>
-  </select>
+  <div class="chartTitle">
+    <h3>Please Select Chart</h3>
+    <select v-model="pick" class="selectChart">
+      <option value="barChart">Bar Chart</option>
+      <option value="lineChart">Line Chart</option>
+      <option value="polarChart">Polar Area Chart</option>
+      <option value="radarChart">Radar Chart</option>
+    </select>
+  </div>
   <div>
     <template v-if="this.pick == 'barChart'">
       <BarChart></BarChart>
@@ -43,5 +46,15 @@ export default {
 </script>
 
 <style scoped>
+.chartTitle {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
 
+.selectChart {
+  padding: 10px 5px;
+  border: 2px solid green;
+
+}
 </style>
